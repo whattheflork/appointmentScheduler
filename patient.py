@@ -11,6 +11,8 @@ class Patient:
         self.appointments_by_day = {}
         self.patient_id = patient_id
 
+    ## If the patient already has an appointment for the day, throw an exception
+    ## Otherwise, add that day to the patient's appointment dictionary
     def makeAppointment(self, startTime):
         dateString = startTime.strftime("%m/%d/%Y")
         if dateString in self.appointments_by_day:

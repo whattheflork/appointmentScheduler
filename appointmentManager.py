@@ -7,6 +7,8 @@ class AppointmentManager:
     def __init__(self):
         self.patients = []
 
+    # If we've processed an appointment for the patient before, add it to that patient's schedule
+    # Otherwise, create a new patient
     def makeAppointment(self, patient_id, startTime):
         foundPatient = None
         for patient in self.patients:
